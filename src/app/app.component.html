@@ -2,11 +2,6 @@
   <span><b>The builder</b></span>
 </mat-toolbar>
 
-<mat-sidenav-container>
-  <mat-sidenav mode="side" opened="true"><!--Sidenav content--></mat-sidenav>
-  <mat-sidenav-content><!--content of the main part-->
-
-
 <mat-card></mat-card>
 <mat-card>
   <mat-card-header>
@@ -16,12 +11,14 @@
   <mat-card>
     <mat-card-header>
       <mat-card-title>
-          <span matTooltip="Tooltip!">
-          <h4>Choose a case: <button mat-button><mat-icon>info</mat-icon></button></h4>
+          <span matTooltip="help">
+          <h4>Choose a case: <!--<button mat-button (click)="openDialogCase()"><mat-icon>info</mat-icon></button>--></h4>
         </span>
       </mat-card-title>
         <mat-card-subtitle>
-          Choosing a case is the main part of building a computer: the case will define which motherboard you can put in it, as well as radiator size, GPU size, power supply size, and the number of fan.
+            <p>Choosing a case is the main part of building a computer:</p>
+            <p>the case will define which motherboard you can put in it, 
+              as well as radiator size, GPU size, power supply size, and the number of fan.</p>
         </mat-card-subtitle>
     </mat-card-header>
   </mat-card>
@@ -114,6 +111,3 @@
     </mat-card-header>
   </mat-card>
 </mat-card>
-
-</mat-sidenav-content>
-</mat-sidenav-container>

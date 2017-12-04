@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Component, Inject} from '@angular/core'
 
 
 import { AppComponent } from './app.component';
@@ -10,8 +11,16 @@ import {
   MatToolbarModule,
   MatIconModule,
   MatCardModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatTooltipModule,
+  MatDialog,
+  MAT_DIALOG_DATA
 } from '@angular/material';
+
+import {
+  NoopAnimationsModule
+} from '@angular/platform-browser/animations'
+import { templateJitUrl } from '@angular/compiler';
 
 @NgModule({
   declarations: [
@@ -24,7 +33,9 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatTooltipModule,
+    NoopAnimationsModule
   ],
   exports: [
     MatButtonModule,
@@ -32,9 +43,33 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatTooltipModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+@Component({
+  selector:'appcomponent',
+  templateUrl:'app.component.html'
+})
+
+export class appComponent{
+  constructor(public dialog:MatDialog){}
+
+  openDialogCase(){
+        this.dialog.open(DialogCase);
+  }
+}
+
+@Component({
+  selector: 'dialogcase',
+  templateUrl:'dialogcase.html'
+})
+
+export class DialogCase{
+  constructor(@Inject(MAT_DIALOG_DATA) public data:any){}
+}
