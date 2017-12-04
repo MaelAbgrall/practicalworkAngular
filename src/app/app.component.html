@@ -1,20 +1,119 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mat-toolbar color="primary">
+  <span><b>The builder</b></span>
+</mat-toolbar>
 
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened="true"><!--Sidenav content--></mat-sidenav>
+  <mat-sidenav-content><!--content of the main part-->
+
+
+<mat-card></mat-card>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title><h2>Build your computer !</h2></mat-card-title>
+  </mat-card-header>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+          <span matTooltip="Tooltip!">
+          <h4>Choose a case: <button mat-button><mat-icon>info</mat-icon></button></h4>
+        </span>
+      </mat-card-title>
+        <mat-card-subtitle>
+          Choosing a case is the main part of building a computer: the case will define which motherboard you can put in it, as well as radiator size, GPU size, power supply size, and the number of fan.
+        </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <span matTooltip="Tooltip!">
+          <h4>Choose a motherboard: <button mat-button><mat-icon>info</mat-icon></button></h4>
+        </span>
+      </mat-card-title>
+      </mat-card-header>
+      <mat-card-subtitle>
+          Choosing a motherboard is the second concern. There is three main type of motherboad: 
+          <ul>
+            <li>ATX, big motherboards, support usually a lot of fans and drives, and at least 3 PCIE slots. but they require at least mid-level cases</li>
+            <li>mATX, or micro-ATX. They are the cheapest ones, comming usually with one or two PCIE slots. They are the cheapest type of motherboard, however they don't support as much fans & drives as ATX boards</li>
+            <li>mini-ITX or ITX, those boards are the small ones (not the smallest though) they have only one PCIE slot, and support less fans than mATX. It is the main board for small computer that need discrete GPU or use their PCIE</li>
+          </ul>
+      </mat-card-subtitle>
+  </mat-card>
+
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <span matTooltip="Tooltip!">
+            <h4>Choose a CPU: <button mat-button><mat-icon>info</mat-icon></button></h4>
+          </span>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-subtitle>
+          CPU or Central Processing Unit is the heart of a computer, they do everything in a computer. Taking a bigger CPU allow to be most efficient in some heavy applications like music edition, video games, etc. You don't need a big CPU if you're only using word or browsing web.
+      </mat-card-subtitle>
+  </mat-card>
+
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <span matTooltip="Tooltip!">
+            <h4>Choose an amount of RAM: <button mat-button><mat-icon>info</mat-icon></button></h4>
+          </span>
+          </mat-card-title>
+      </mat-card-header>
+      <mat-card-subtitle>
+          There is three major factors to choose RAM:
+          <ul>
+            <li>Ram speed (in MHz) it is the clock speed of your RAM, fatest RAM allow faster operations, so a faster computer. However, speed beyond 3000Hz is useless since your system / CPU won't match this speed</li>
+            <li>Ram CAS, or Column Access Strobe, is the number of clock cycle between an instruction, and the Ram answer. The lower the CAS is, the better the ram is. However it is not as important as Ram speed</li>
+            <li>Amount of Go. This is how much information you can put in your Ram. Putting more ram won't affect computer speed: it allow only more application to be open. However depending of the usage, you need different amount of ram: for web browsing or just text typing, 4 or 6 Go is enough. For gaming, 8Go is the minimum 16Go is better. 32, 64 & more are reserved for specific application such as web servers, scientific computation, etc</li>
+          </ul>
+      </mat-card-subtitle>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <span matTooltip="Tooltip!">
+          <h4>Choose one or multiple GPU(s): <button mat-button><mat-icon>info</mat-icon></button></h4>
+        </span>
+      </mat-card-title>
+      <mat-card-subtitle>
+        GPU or Graphical Processing Unit is used to render images. Usually CPU can handle this task, so some computer does not need a discrete graphic card. However it is recommanded to play games, since the hard task to render images will be given to the GPU, freeing the CPU. Architecture on a gpu is different, think that a CPU is best at solving complex tasks, while a gpu is best at solving simple one, but can do a lot of those simple task at the same time. A gpu is also usefull for some scientific usage and special processing like in AI due to this specific architecture.
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <span matTooltip="Tooltip!">
+          <h4>Choose a ventirad: <button mat-button><mat-icon>info</mat-icon></button></h4>
+        </span>
+      </mat-card-title>
+      <mat-card-subtitle>
+        A ventirad is needed to cool down your CPU.
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <span matTooltip="Tooltip!">
+          <h4>Choose a power supply: <button mat-button><mat-icon>info</mat-icon></button></h4>
+        </span>
+      </mat-card-title>
+      <mat-card-subtitle>
+        Power supply will give electricity to your computer. Choosing a power supply is simple, just add comsumption of your CPU and GPU(s), add 50/100W in case of plugin a lot of fans, drives and usb devices. Remember that choosing a over-powered power supply is okay, but choosing an underpowered is dangerous for your hardware. There is also some type of power supply called bronze, silver, gold and platine. It mean that those power supply are more efficient converting electricity from your walls to your computer. However, when you are using an overpowered power-supply this is meaningless since you will not use it at this optimal point.
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</mat-card>
+
+</mat-sidenav-content>
+</mat-sidenav-container>
