@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Component, Inject} from '@angular/core'
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -14,7 +14,9 @@ import {
   MatSidenavModule,
   MatTooltipModule,
   MatDialog,
-  MAT_DIALOG_DATA
+  MAT_DIALOG_DATA,
+  MatExpansionModule,
+  MatSelectModule
 } from '@angular/material';
 
 import {
@@ -35,7 +37,10 @@ import { templateJitUrl } from '@angular/compiler';
     MatCardModule,
     MatSidenavModule,
     MatTooltipModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatExpansionModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     MatButtonModule,
@@ -45,7 +50,9 @@ import { templateJitUrl } from '@angular/compiler';
     MatCardModule,
     MatSidenavModule,
     MatTooltipModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatExpansionModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
